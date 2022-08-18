@@ -1,7 +1,7 @@
 *Copied from Wolfgang's Blog
 (<https://notthebe.ee/blog/removing-the-wifi-whitelist/>) for preservation*
 
-# Removing the Wi-Fi whitelist on Haswell Thinkpads (T440p, W540, T540, etc.)
+## Removing the Wi-Fi whitelist on Haswell Thinkpads (T440p, W540, T540, etc.)
 
 2020-06-17
 
@@ -11,7 +11,7 @@ install a card that wasn't approved by Lenovo, your laptop will **simply refuse
 to boot**
 
 
-## Disclaimer
+### Disclaimer
 
 1. This process is quite involved and requires at least a basic knowledge of
    Google and a steady hand. I provide zero warranty in case something goes
@@ -28,7 +28,7 @@ to boot**
 3. This process does not remove the BIOS or Supervisor password
 
 
-## Gathering supplies
+### Gathering supplies
 
 Apart from the laptop itself, you will also need:
 
@@ -38,14 +38,14 @@ they're usually sold together on websites like eBay, Amazon or Aliexpress for
 about $10.
 
 
-## Assembling the programmer
+### Assembling the programmer
 
 Before using the programmer you also need to assemble it. Align the red wire on
 the clip with number "1" on the adapter, raise the lever on the programmer and
 plug the clip in the programmer as shown. Put down the lever.
 
 
-## Installing software
+### Installing software
 
 First, we need to install three things on our second computer:
 [flashrom](https://flashrom.org/Flashrom),
@@ -74,7 +74,7 @@ After that, clone the thinkpad-uefi-sign Github repository or simply download
 the ZIP and unpack it into the same folder that you used for UEFIPatch.
 
 
-## Preparing the patches
+### Preparing the patches
 
 Download the text file with patches from the video description, move it to the
 UEFIPatch folder and open it with your favorite text editor. Here we're going
@@ -86,7 +86,7 @@ hidden advanced settings in BIOS, but if you don't want that for some reason,
 put a hash symbol in front of the line. Save the file and quit.
 
 
-## Dumping the BIOS
+### Dumping the BIOS
 
 Turn your laptop upside down, remove the battery and take off the base cover.
 Take a good look at the motherboard and eventually you'll see a BIOS chip. If
@@ -136,7 +136,7 @@ You can also leave the clip on the chip, since we'll have to put in back in
 a minute anyway.
 
 
-## Patching the BIOS
+### Patching the BIOS
 
 Now we're going to patch the BIOS file and remove the Wi-Fi whitelist. Make
 sure you have UEFIPatch and the BIOS file in the same folder and type
@@ -184,7 +184,7 @@ As you can see, it says "Signatures correct"
 Now it's time to flash the modded BIOS back to the laptop.
 
 
-## Flash the BIOS
+### Flash the BIOS
 
 Re-connect the USB programmer to your second laptop and in case you removed the
 clip from the BIOS chip, put it on again.
@@ -211,7 +211,7 @@ If you take a look at the BIOS menu, you'll also see a bunch of new settings
 such as power limits, ACPI states and so on. Have fun!
 
 
-## Special thanks
+### Special thanks
 * Thrimbor <https://github.com/thrimbor>
 * tonymacx86 <https://www.tonymacx86.com/>
 * XX and paranoidbashthot for developing the BootGuard bypass method and
